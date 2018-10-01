@@ -100,10 +100,12 @@
         $("body").width(w);
     });    
     $(window).resize(function () {
-        var h = $(window).height();
-        var w = $(window).width();       
-        $("body").height(h);
-        $("body").width(w);
+       if ($("#type").width()===1) {
+		var h = $(window).height();
+		var w = $(window).width();       
+		$("body").height(h);
+		$("body").width(w);
+        }
     });    
 
     function showhide(tohide, toshow){     
