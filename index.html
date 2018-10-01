@@ -81,6 +81,7 @@
     </footer>
 </body>
 <script>
+	screen.orientation.lock('portrait')
     if($("#type").width()===0){
         $("#auto_display").hide();
         $("#pause_continue").hide();
@@ -111,10 +112,12 @@
         $("body").width(w);
     });    
     $(window).resize(function () {
-        var h = $(window).height();
-        var w = $(window).width();       
-        $("body").height(h);
-        $("body").width(w);
+       if ($("#type").width()===1) {
+		var h = $(window).height();
+		var w = $(window).width();       
+		$("body").height(h);
+		$("body").width(w);
+        }
     });    
 
     function showhide(tohide, toshow){     
