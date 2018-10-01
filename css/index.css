@@ -104,3 +104,40 @@ footer{
     border: 1px solid black;
     height: 100%    ;
 }
+#manual_input{
+    width: 80%;
+    float: left;
+}
+#buttons{
+    width: 20%;
+    float: left;
+    padding: .5em;
+    height: 100%;
+}
+#mas img, #less img{
+    width: 50%;
+    height: 50%;
+}
+#mas{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+#buttons button{
+    width: 40%;
+    height: 40%;
+    display: block;
+}
+#manual_data{
+    height: 3em;
+    width: 100%;
+}
+#accept_manual{
+    width: 20%;
+    padding: .25em;
+    margin: 0 40%;
+}
+#test{
+    height: 30%;
+    width: 100%;
+    padding: 4% 25%;
+}
