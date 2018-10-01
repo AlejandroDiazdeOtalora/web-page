@@ -30,7 +30,18 @@
                 <div  id="manual_display" class="horizontal_float">
                     <div id="control_manual">
                         <div id="inner_manual">
-                            manual
+                            <div id="manual_input">
+                                <div id="test"><input id="manual_data" type="text"></div>
+                                <button id="accept_manual">Aceptar</button>
+                            </div>
+                            <div id="buttons">
+                                <button id="mas">
+                                    <img src="resources/plus.png" alt="">
+                                </button>
+                                <button id="less">
+                                    <img src="resources/minus.png" alt="">
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div id="animation" class="">
@@ -64,8 +75,11 @@
     </footer>
 </body>
 <script>
-    $("#auto_display").hide();
-    $("#pause_continue").hide();
+    screen.orientation.lock();
+    if($("#type").width()===0){
+        $("#auto_display").hide();
+        $("#pause_continue").hide();
+    }
 	var elo = document.getElementById("animation_box");
 	setInterval(function(){	
 		if(elo.classList.contains("stage1")){
