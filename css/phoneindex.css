@@ -1,4 +1,5 @@
-@media (max-width: 700px){
+@media (max-width: 700px)
+and (orientation: portrait){
 	*{
 		box-sizing: border-box;
 	}
@@ -35,7 +36,7 @@
 	}
 	#switch_manauto div{		
 	    text-align: center;
-	    padding: 1%;
+	    padding: 0 !important;
 	}
 	#stats{
 		width: 20% !important;
@@ -95,9 +96,31 @@
 		margin-top: 5% !important;
 	}
 	#manual_data{
-		height: 2em !important;
+		height: 1.5em !important;
 	}
 	#accept_manual{
 		margin-top: 1% !important;
+		width: 25% !important;
+	}
+}
+@media(min-width: 700px) and (max-width: 1080px){
+	#animation_box{
+		background: blue !important;
+	}
+	#manual_data{
+		height: 1.5em !important;
+	}
+	#buttons button{
+		width: 60% !important;
+	}
+}
+@media (max-height: 900px) and (min-height: 600px){
+	#manual_data{
+		height: 3em !important;
+	}
+	#accept_manual{
+		width: 30% !important;
+		height: 3em;
+		margin: 0 35%;
 	}
 }
