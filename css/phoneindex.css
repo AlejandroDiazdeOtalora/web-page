@@ -101,16 +101,3 @@
 		margin-top: 1% !important;
 	}
 }
-@media only screen and (max-width: 900px)
-{
-	#manual_data{
-		height: 2em !important;
-	}
-	#buttons button {
-		width: 60% !important;
-		height: 50% !important;
-	}
-	#mas {
-		margin-top: 0 !important;
-	}
-}
