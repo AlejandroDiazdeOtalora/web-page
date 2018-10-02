@@ -136,6 +136,7 @@
         $("body").width(w);
     });    
     $(window).resize(function () {
+    	var focused = document.getElementById("manual_data");
        	if(document.activeElement != focused) {
        		window.location.reload();
 		var h = $(window).height();
