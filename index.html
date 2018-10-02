@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BatCode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/phoneindex.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <style type="text/css"></style>
+</head>
+<body>
+    <input type="hidden" id="manu_auto" value=':="mis_datos".contador:'>
+    <div id="fullfade" class="disable"></div>
+    <div id="message" class="disable">
+        <div id="message_text">Se volvera a la posicion inical</div>
+        <div id="message_button">
+            <form id="form_message" onsubmit="return closemsg(this.id)">
+                <!-- AWP_In_Variable Name='"INPUT".REARME' -->
+                <input type="hidden" name='"INPUT".REARME' value="1">
+                <button id="message_accept" type="submit">Aceptar</button>
+            </form>
+        </div>
+    </div>
+    <div id="wrapper">
+        <input id="type" type="hidden" value="">
+        <div id="secundario">
+            <div id="logo">
+                <div id="inner_logo">test</div>
+            </div>
+            <div id="switch_manauto">
+                <div class="vertical_half">
+                    <form id="form_manual" onsubmit="return showhide('auto_display','control_manual',this.id)">
+                        <!-- AWP_In_Variable Name='"INPUT".MANU_AUTO' -->
+                        <input type="hidden" name='"INPUT".MANU_AUTO' value="0">
+                        <button id="button_manual" type="submit">Manual</button>
+                    </form>
+                </div>
+                <div class="vertical_half">
+                    <form id="form_auto" onsubmit="return showhide('control_manual', 'auto_display',this.id)">
+                        <!-- AWP_In_Variable Name='"INPUT".MANU_AUTO' -->
+                        <input type="hidden" name='"INPUT".MANU_AUTO' value="1">
+                        <button id="button_auto" type="submit">Auto</button>
+                    </form>
+                </div>
+            </div>
+            <div id="stats">
+                <div id="inner_stats">
+                    <!--<div id="magic" class="magic" onclick="swap()">
+                        <div id="txt_graphs">GRAPHS</div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div id="principal">
+            <div class="vertical_half vertical_half_responsive">
+                <div  id="manual_display" class="horizontal_float">
+                    <div id="fade_manual_display"></div>
+                    <div id="control_manual">
+                        <div id="inner_manual">
+                            <div id="manual_input">
+                                <div id="test"><input id="manual_data" type="text" value="1" maxlength="3"></div>
+                                <button id="accept_manual" onclick="position()">Aceptar</button>
+                            </div>
+                            <div id="buttons">
+                                <button id="mas" onclick="add()">
+                                    <img src="resources/plus.png" alt="">
+                                </button>
+                                <button id="less" onclick="substract()">
+                                    <img src="resources/minus.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="animation" class="">
+                        <div id="animation_box" class="stage stage1"></div>
+                    </div>
+                </div>
+                <div id="always_displayed" class="horizontal_float">
+                    <div id="inner_displayed">
+
+                    </div>
+                </div>
+            </div>
+            <div class="vertical_half vertical_half_responsive">
+                <div  id="auto_display" class="horizontal_float horizontal_float_responsive">
+                    <div id="fade_auto_display"></div>
+                    <div id="control_auto">
+
+                        <div id="inner_auto">
+                            Automatico
+                            <form id="form_test" onsubmit="return request2server(this.id)">
+                                <!-- AWP_In_Variable Name='"INPUT".MANU_AUTO' -->
+                                <input type="hidden" name='"INPUT".MANU_AUTO' value="1">
+                                <!-- AWP_In_Variable Name='"INPUT".PARO' -->
+                                <input type="hidden" name='"INPUT".PARO' value="0">
+                                <!-- AWP_In_Variable Name='"INPUT".PAUSE' -->
+                                <input type="hidden" name='"INPUT".PAUSE' value="1">
+                                <!-- AWP_In_Variable Name='"INPUT".REARME' -->
+                                <input type="hidden" name='"INPUT".REARME' value="0">
+                                <button type="submit">1</button>
+                            </form>
+                            <form id="form_test2" onsubmit="return request2server(this.id)">
+                                <!-- AWP_In_Variable Name='"INPUT".MANU_AUTO' -->
+                                <input type="hidden" name='"INPUT".MANU_AUTO' value="0">
+                                <!-- AWP_In_Variable Name='"INPUT".PARO' -->
+                                <input type="hidden" name='"INPUT".PARO' value="1">
+                                <!-- AWP_In_Variable Name='"INPUT".PAUSE' -->
+                                <input type="hidden" name='"INPUT".PAUSE' value="0">
+                                <!-- AWP_In_Variable Name='"INPUT".REARME' -->
+                                <input type="hidden" name='"INPUT".REARME' value="1">
+                                <button type="submit">2</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="pause_continue" class="horizontal_float horizontal_float_responsive">
+                    <div id="inner_pause">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>
