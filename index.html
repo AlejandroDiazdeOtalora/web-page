@@ -88,21 +88,6 @@
     </footer>
 </body>
 <script>
-    $(document).ready(function () {     
-        var h = $(window).height();
-        var w = $(window).width();        
-        $("body").height(h);
-        $("body").width(w);
-    	showmsg();       
-    });    
-    $(window).resize(function () {
-        if($("#type").width()==1){
-            var h = $(window).height();
-            var w = $(window).width();       
-            $("body").height(h);
-            $("body").width(w);
-        }
-    }); 
     function showmsg(){
         document.getElementById("fullfade").classList.remove('disable');
         document.getElementById("message").classList.remove('disable');
@@ -143,7 +128,7 @@
 			elo.classList.add("stage1");
 			elo.classList.remove("stage3");	
 		}
-	},2000);
+	},2000);*/
     $(document).ready(function () {   	
         var h = $(window).height();
         var w = $(window).width();        
@@ -151,6 +136,7 @@
         $("body").width(w);
     });    
     $(window).resize(function () {
+    	var focused = document.getElementById("manual_data");
        	if(document.activeElement != focused) {
        		window.location.reload();
 		var h = $(window).height();
