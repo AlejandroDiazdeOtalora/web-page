@@ -112,7 +112,8 @@
         $("body").width(w);
     });    
     $(window).resize(function () {
-       if ($("#type").width()===1) {
+       	if(document.activeElement != focused) {
+       		window.location.reload();
 		var h = $(window).height();
 		var w = $(window).width();       
 		$("body").height(h);
