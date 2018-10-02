@@ -19,13 +19,17 @@ $(document).ready(function () {
 });
 $(window).resize(function () {
     var focused = document.getElementById("manual_data");
-    if(document.activeElement != focused){
+    if(document.activeElement == focused){
+        var isBeenFocused = true;
+    }
+    if(document.activeElement != focused||isBeenFocused!=true){
         window.location.reload();
         var h = $(window).height();
         var w = $(window).width();
         $("body").height(h);
         $("body").width(w);
     }
+    
 });
 function request2server(idform) {
     var data = $("#"+idform).serialize();
