@@ -96,13 +96,14 @@
     	showmsg();       
     });    
     $(window).resize(function () {
-        if($("#type").width()==1){
-            var h = $(window).height();
-            var w = $(window).width();       
-            $("body").height(h);
-            $("body").width(w);
+       	if(document.activeElement != focused) {
+       		window.location.reload();
+		var h = $(window).height();
+		var w = $(window).width();       
+		$("body").height(h);
+		$("body").width(w);
         }
-    }); 
+    });  
     function showmsg(){
         document.getElementById("fullfade").classList.remove('disable');
         document.getElementById("message").classList.remove('disable');
