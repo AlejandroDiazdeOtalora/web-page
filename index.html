@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">	
+    document.write("<div id='time'></div>");
+    setInterval(function () {
+        var today = new Date();
+        var navidad = new Date(today.getFullYear(), 11, 25);
+        ms = navidad - today;
+        secsTemp = ms / 1000;
+
+        minsTemp = secsTemp / 60;
+        secs = getDecimals(minsTemp) * 60;
+
+        hoursTemp = minsTemp / 60;
+        mins = getDecimals(hoursTemp) * 60;
+
+        daysTemp = hoursTemp / 24;
+        hours = temp = getDecimals(daysTemp) * 24;
+
+        document.innerHTML += document.getElementById("time").innerHTML
+            = Math.floor(daysTemp)+" days "+Math.floor(hours)+" hours "
+            +Math.floor(mins)+" minutes "+Math.floor(secs)+" seconds";
+    },1000);
+    function getDecimals(number) {
+    return number - Math.floor(number);
+}
+</script>
+</html>
